@@ -1,0 +1,50 @@
+<table class="table_members">
+  <tr class="table_members__row">
+    @for ( value of tableHeadData; track value) {
+      <th class="table_members__cell table_members__cell__head" >
+        <span class="table_members__title">
+          {{value}}
+        </span>
+      </th>
+    }
+  </tr>
+  @for (member of data$(); track member?.id) {
+    <tr class="table_members__row table_members__row__body" (click)="onEditMember(member)">
+      <td class="table_members__cell">
+        <div class="table_members__cell-row">
+          <p class="table_members__text">
+            {{member?.userName}}
+          </p>
+        </div>
+      </td>
+      <td class="table_members__cell">
+        <div class="table_members__cell-row">
+          <p class="table_members__text">
+            {{member?.firstName}}
+          </p>
+        </div>
+      </td>
+      <td class="table_members__cell">
+        <div class="table_members__cell-row">
+          <p class="table_members__text">
+            {{member?.lastName}}
+          </p>
+        </div>
+      </td>
+      <td class="table_members__cell">
+        <div class="table_members__cell-row">
+          <p class="table_members__text">
+            {{member?.email}}
+          </p>
+        </div>
+      </td>
+      <td class="table_members__cell">
+        <div class="table_members__cell-row">
+          <p class="table_members__text">
+            {{member?.type}}
+          </p>
+        </div>
+      </td>
+    </tr>
+  }
+</table>

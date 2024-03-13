@@ -1,0 +1,31 @@
+<div class="modal-action">
+
+  <div class="modal-action-title">
+    {{modalData?.userName || 'Create new user'}}
+  </div>
+
+  <form [formGroup]="form">
+    <app-form-input label="Username" placeholder='Username' formControlName="userName" [required]="true"/>
+    <app-form-input label="First name" placeholder="First name" formControlName="firstName" [required]="true"/>
+    <app-form-input label="Last name" placeholder="Last name" formControlName="lastName" [required]="true"/>
+    <app-form-input label="Email" placeholder="Email" formControlName="email" [required]="true" [prefix]="true"/>
+    <app-form-select formControlName="type" label="Type" placeholder="Type" [required]="true">
+      @for (item of memberTypes; track item) {
+          <app-form-select-option [value]="item?.value">
+            {{ item?.title }}
+          </app-form-select-option>
+      }
+    </app-form-select>
+    <app-form-input label="Password" placeholder="Password" formControlName="password" [required]="true" type="password"/>
+    <app-form-input label="Repeat password" placeholder="Repeat password" formControlName="passwordRepeat" [required]="true" type="password"/>
+  </form>
+
+  <div class="modal-action__footer" [class.modal-action__footer-create]="!modalData">
+    @if (modalData) {
+      <button class="btn btn-del" (click)="onDelete()">Delete</button>
+      <button class="btn" (click)="onSave()">Save</button>
+    } @else {
+      <button class="btn" (click)="onCreate()">Create</button>
+    }
+  </div>
+</div>

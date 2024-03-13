@@ -2,9 +2,53 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@environments/*": [
+        "environments/*"
+      ],
+      "@helpers/*": [
+        "app/shared/helpers/*"
+      ],
+      "@helpers": [
+        "app/shared/helpers"
+      ],
+      "@shared/interceptors/*": [
+        "app/shared/interceptors/*"
+      ],
+      "@modules/*": [
+        "app/shared/modules/*"
+      ],
+      "@shared/*": [
+        "app/shared/*"
+      ],
+      "@core/*": [
+        "app/core/*"
+      ],
+      "@controls/*": [
+        "app/shared/controls/*"
+      ],
+      "@services/*": [
+        "app/shared/services/*"
+      ],
+      "@models/*": [
+        "app/shared/models/*"
+      ],
+      "@pipes/*": [
+        "app/shared/pipes/*"
+      ],
+      "@static/*": [
+        "app/shared/static/*"
+      ],
+      "@guards/*": [
+        "app/shared/guards/*"
+      ],
+      "@components/*": [
+        "app/shared/components/*"
+      ],
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

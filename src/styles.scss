@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'scss/base/custom-reset';
+@use 'scss/base/fonts';
+@use 'scss/base/color';
+@use 'scss/base/variable';
+@use 'scss/base/global';
+
+
+@use 'scss/components/home';
+@use 'scss/components/modal';
+@use 'scss/components/table-members';
+@use 'scss/components/modal-action';
+@use 'scss/components/form-member';
+@use 'scss/components/form-input';
+@use 'scss/components/form-select';
+@use 'scss/components/notification';

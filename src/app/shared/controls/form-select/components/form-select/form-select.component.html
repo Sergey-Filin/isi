@@ -1,0 +1,29 @@
+<label class="form-field" (click)="showDropdown($event)">
+  <span class="form-field__text" [class.required]="isRequired">{{ label }}</span>
+  <div
+    class="form-field__select"
+    #dropDownContainer
+    #selectInput
+    [class.obfuscation]="!!value"
+    tabindex="0"
+    appControlErrors
+    (status)="onChangeStatus($event)">
+    <p *ngIf="!value; else displayedValue" class="select-content">
+      <span class="select-placeholder">{{ placeholder || label }}</span>
+    </p>
+    <ng-template #displayedValue>
+      <span class="select-value">{{ value }}</span>
+    </ng-template>
+  </div>
+  <app-dropdown
+    [reference]="dropDownContainer"
+    #dropdownComp
+    [minWidth]="minWidth"
+    [additionalClass]="dropdownClass">
+    <div class="dropdown-container">
+      <div class="dropdown-options-container container-fixed" #optionsContainer>
+        <ng-content select="app-form-select-option"></ng-content>
+      </div>
+    </div>
+  </app-dropdown>
+</label>

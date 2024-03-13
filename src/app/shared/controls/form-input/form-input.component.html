@@ -1,0 +1,17 @@
+<label class="form-field">
+  <span class="form-field__text" [class.required]="required">{{ label }}</span>
+  <input
+    #formInput
+    class="form-field__input"
+    [class.error]="status"
+    [type]="type === 'number' ? 'text' : type"
+    [attr.inputmode]="inputMode"
+    [class.form-field__input_prefix]="prefix"
+    [value]="value || ''"
+    [placeholder]="placeholder || label || ''"
+    [disabled]="disabled"
+    [readonly]="readonly"
+    (blur)="onTouched()"
+    (input)="onChangeValue($event)"
+    appControlErrors />
+</label>

@@ -1,0 +1,97 @@
+@use '../base/color';
+
+.required::after {
+  color: red;
+  content: '*';
+}
+
+.form-field {
+  display: block;
+  margin-bottom: 1.6rem;
+  position: relative;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    color: color.$black;
+    position: relative;
+  }
+
+  &__input {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: color.$black;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.6rem 1.5rem;
+    border-radius: 0.6rem;
+    border: none;
+    outline: none;
+    background-color: color.$bg-input-color;
+
+    &::placeholder {
+      font-size: 1.3rem;
+      line-height: 1.6rem;
+      color: color.$grey;
+    }
+
+    &:focus {
+      border-color: color.$grey;
+    }
+
+    &_prefix {
+      background-image: url('/assets/images/email.svg');
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: 1.6rem;
+      padding: 1.6rem 1.5rem 1.6rem 4.6rem;
+    }
+
+    &.error {
+      border: 0.1rem solid color.$red;
+
+      &:focus &:focus-visible {
+        border: 0.1rem solid color.$red;
+      }
+    }
+  }
+
+  &__select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    padding: 1.6rem 1.5rem;
+    border-radius: 0.6rem;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    background-color: color.$bg-input-color;
+    background-image: url('/assets/images/arrow-drop-down.svg');
+    background-repeat: no-repeat;
+    background-position: center right 1.6rem;
+
+    .select-placeholder {
+      font-size: 1.3rem;
+      line-height: 1.6rem;
+      color: color.$grey;
+    }
+
+    &:focus {
+      border-color: color.$grey;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: color.$red;
+    padding-top: 0.3rem;
+  }
+}
+

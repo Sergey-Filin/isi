@@ -1,0 +1,11 @@
+<!--<button (click)="openModal()">click</button>-->
+
+<div class="home-page">
+  <div class="members-list">
+    <div class="home-page-panel">
+      <button class="btn btn-primary" (click)="creteMember()">Create User</button>
+    </div>
+
+    <app-table-members [data$]="members$()" (member)="onEditMember($event)"></app-table-members>
+  </div>
+</div>

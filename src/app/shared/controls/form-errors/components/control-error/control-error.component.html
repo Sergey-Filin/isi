@@ -1,0 +1,5 @@
+<p [class.hide]="hide" class="form-field__error">
+  @if (displayedError){
+    {{ displayedError.key || displayedError.value }}
+  }
+</p>

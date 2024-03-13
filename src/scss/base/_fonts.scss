@@ -1,0 +1,17 @@
+$font-path: '/assets/fonts/';
+
+@font-face {
+  font-display: swap;
+  font-family: 'Helvetica';
+  src: url('#{$font-path}Helvetica/Helvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Helvetica';
+  src: url('#{$font-path}Helvetica/Helvetica-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

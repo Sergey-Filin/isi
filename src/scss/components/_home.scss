@@ -1,0 +1,17 @@
+.home-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  &-panel {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.members-list {
+}

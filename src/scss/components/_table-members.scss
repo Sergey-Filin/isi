@@ -1,0 +1,48 @@
+@use "../base/color";
+.table_members {
+  background-color: color.$white;
+  border: .1rem solid color.$border;
+  border-radius: .6rem;
+  box-shadow: 0 0 .3rem color.$shadow;
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: separate;
+
+  &__cell {
+    text-align: left;
+    vertical-align: top;
+
+    &__head {
+      padding: 2.6rem 2.6rem 1.6rem 2.6rem;
+      color: color.$grey;
+    }
+
+    &-row {
+      padding: 2.1rem 2.6rem 2.1rem 2.6rem;
+      border-bottom: .2rem solid color.$white;
+    }
+  }
+
+  &__row {
+    padding: 1.1rem;
+
+    &__body {
+      background-color: color.$field-color;
+      cursor: pointer;
+
+      &:hover {
+        background-color: color.$field-hover-color;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__text {
+    width: 19.12rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="modal__wrap">
+  @switch (contentType) { @case ('string') {
+    <div class="box">
+      <div [innerHTML]="content"></div>
+    </div>
+  } @case ('template') {
+    <ng-container *ngTemplateOutlet="content; context: context"></ng-container>
+  } @case ('component') {
+    <ng-container *ngComponentOutlet="content"></ng-container>
+  } }
+
+  <div *ngIf="showCloseBtn" (click)="close()" class="modal-close" aria-label="close">
+    <img alt="close" src="assets/images/close.svg">
+  </div>
+
+</div>

@@ -1,0 +1,50 @@
+@use '../base/color';
+
+.dropdown-container {
+  position: relative;
+  width: 100%;
+  pointer-events: auto;
+
+  .dropdown-options-container {
+    max-height: 27.5rem;
+    min-width: 17rem;
+    width: 100%;
+    overflow: auto;
+    background-color: color.$field-hover-color;
+    border-radius: 0.4rem;
+    box-shadow: 0 4rem 2rem rgba(0, 0, 0, 0.06);
+    display: block;
+    padding: 0.2rem 0;
+  }
+
+  .select-value {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: inherit;
+    display: inline-block;
+  }
+}
+
+app-form-select-option {
+  display: block;
+  padding: 0.4rem 1.6rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 16px;
+  color: color.$black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color.$grey;
+  }
+
+  &.selected {
+    background-color: color.$blue;
+    color: color.$white;
+  }
+}
+
+.cdk-overlay-connected-position-bounding-box {
+  position: absolute;
+}
